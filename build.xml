@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="build">
+
+<!-- APPLICATION METADATA -->
+<property name="masysma.target" value="big4"/> 
+<property name="masysma.main"   value="Big4"/> 
+<property name="mdpc.name"      value="mdvl-big4"/>
+<property name="mdpc.section"   value="admin"/>
+<property name="mdpc.arch"      value="all"/>
+<property name="mdpc.descrs"    value="Create big files with zeroes, random text or random bytes"/>
+<property name="mdpc.conflicts" value="mdvl-java-applications"/>
+<property name="mdpc.descrl">
+ Big4 is a commandline utility to automatically create files of arbitrary (big)
+ sizes which can be used to check data transfer speeds, compression alogirthms,
+ backup software etc. This version of the package does not include the legacy
+ versions Big1 to Big3 (because they are all superseded by Big4's
+ functionality).
+</property>
+
+<property name="mdpc.file.install">
+big4 /usr/bin
+big4.jar /usr/share/java
+</property>
+
+<target name="build" depends="jar"/>
+
+<!-- CI INTEGRATION -->
+<target name="package_triggered" depends="package">
+	<property name="masysma.ci.trigger" value="newver"/>
+</target>
+
+<!-- CONSTANT TPL IMPORT -->
+<property environment="env"/>
+<condition property="masysma.internal.includepath.rel" value="${env.MDVL_CI_PHOENIX_ROOT}" else=".."><isset property="env.MDVL_CI_PHOENIX_ROOT"/></condition>
+<property name="masysma.internal.includepath" location="${masysma.internal.includepath.rel}"/>
+<property name="masysma.internal.loadpath" value="${masysma.internal.includepath}/co-build/ant-build-template.xml"/>
+<condition property="masysma.internal.load" value="file://${masysma.internal.loadpath}" else="https://raw.githubusercontent.com/m7a/co-build/master/ant-build-template.xml"><resourceexists><file file="${masysma.internal.loadpath}"/></resourceexists></condition>
+<import><url url="${masysma.internal.load}"/></import>
+
+<fileset id="masysma.inccls" dir="latest" includes="*.class"/>
+
+</project>
