@@ -30,13 +30,13 @@ lassen sich eigene Webseiten hiermit auf Spamsicherheit testen, indem man z.B.
 1 MB Daten in ein Textfeld eingibt, das auf komplexe Weise ausgewertet werden
 muss.
 
-Im Grunde funktionieren alle Big Versionen gleich, Big 2 bietet im Vergleich
+Im Grunde funktionieren alle Big Versionen gleich, Big\ 2 bietet im Vergleich
 zur Vorversion etwas mehr Funktionen, z.B. Zufallsdaten, und arbeitet wesentlich
 genauer. Leider waren die beiden Big Versionen 1 und 2 nicht besonders schnell,
 weshalb man beim Erzeugen der Daten besser einfach eine 1 MB Datei erzeugte und
 diese dann einige Male kopierte, um z.B. einen großen Order zu erstellen.
 
-In Big 3 wurde das Geschwindigkeitsproblem weitgehend behoben. Zwar waren in
+In Big\ 3 wurde das Geschwindigkeitsproblem weitgehend behoben. Zwar waren in
 Sonderfällen Programme wie `dd` immernoch schneller, dafür konnte man auf ein
 einfacheres und plattformunabhängiges Interface zurückgreifen und den
 Fortschritt live beobachten.
@@ -44,8 +44,8 @@ Fortschritt live beobachten.
 Big1
 ====
 
-Big 1 wurde vor allem durch ungenaue Arbeitsweise und schlechte Übersetzung
-characterisiert, erfüllte aber seinen eigentlichen Zweck recht gut. Big 1
+Big\ 1 wurde vor allem durch ungenaue Arbeitsweise und schlechte Übersetzung
+characterisiert, erfüllte aber seinen eigentlichen Zweck recht gut. Big\ 1
 erzeugte eine sinnlose XML Datei, deren Größe durch die Anzahl der Zeilen
 mit dem Inhalt `+++ruibbish+++` gekennzeichnet wurde. Weil für die Bestimmung
 der Zeilenanzahl ursprünglich einfach eine Textdatei erstellt wurde, in der
@@ -54,7 +54,7 @@ gewisse Ungenauigkeit.
 
 ## Bedienung
 
-Big 1 begrüßte den Nutzer in schlechtem Englisch mit folgender Hilfeseite
+Big\ 1 begrüßte den Nutzer in schlechtem Englisch mit folgender Hilfeseite
 
 	$ java Big
 	USAGE :
@@ -67,11 +67,10 @@ Big 1 begrüßte den Nutzer in schlechtem Englisch mit folgender Hilfeseite
 	Warning :
 	THIS PROGRAM IS ONLY FOR TO LEARN NOT TO SPAM SOME OTHERS AS YOU!
 
-
 Big2
 ====
 
-Big 2 arbeitete wesentlich genauer als big/1(33) und ermöglichte das Erzeugen
+Big\ 2 arbeitete wesentlich genauer als Big\ 1 und ermöglichte das Erzeugen
 von verschiedenen Daten, entweder nur „Null-Bytes“, Zufallstexte oder
 zufällige Binärdaten.
 
