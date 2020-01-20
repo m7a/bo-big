@@ -30,13 +30,13 @@ lassen sich eigene Webseiten hiermit auf Spamsicherheit testen, indem man z.B.
 1 MB Daten in ein Textfeld eingibt, das auf komplexe Weise ausgewertet werden
 muss.
 
-Im Grunde funktionieren alle Big Versionen gleich, Big\ 2 bietet im Vergleich
+Im Grunde funktionieren alle Big Versionen gleich, Big 2 bietet im Vergleich
 zur Vorversion etwas mehr Funktionen, z.B. Zufallsdaten, und arbeitet wesentlich
 genauer. Leider waren die beiden Big Versionen 1 und 2 nicht besonders schnell,
 weshalb man beim Erzeugen der Daten besser einfach eine 1 MB Datei erzeugte und
 diese dann einige Male kopierte, um z.B. einen großen Order zu erstellen.
 
-In Big\ 3 wurde das Geschwindigkeitsproblem weitgehend behoben. Zwar waren in
+In Big 3 wurde das Geschwindigkeitsproblem weitgehend behoben. Zwar waren in
 Sonderfällen Programme wie `dd` immernoch schneller, dafür konnte man auf ein
 einfacheres und plattformunabhängiges Interface zurückgreifen und den
 Fortschritt live beobachten.
@@ -44,8 +44,8 @@ Fortschritt live beobachten.
 Big1
 ====
 
-Big\ 1 wurde vor allem durch ungenaue Arbeitsweise und schlechte Übersetzung
-characterisiert, erfüllte aber seinen eigentlichen Zweck recht gut. Big\ 1
+Big 1 wurde vor allem durch ungenaue Arbeitsweise und schlechte Übersetzung
+characterisiert, erfüllte aber seinen eigentlichen Zweck recht gut. Big 1
 erzeugte eine sinnlose XML Datei, deren Größe durch die Anzahl der Zeilen
 mit dem Inhalt `+++ruibbish+++` gekennzeichnet wurde. Weil für die Bestimmung
 der Zeilenanzahl ursprünglich einfach eine Textdatei erstellt wurde, in der
@@ -54,7 +54,7 @@ gewisse Ungenauigkeit.
 
 ## Bedienung
 
-Big\ 1 begrüßte den Nutzer in schlechtem Englisch mit folgender Hilfeseite
+Big 1 begrüßte den Nutzer in schlechtem Englisch mit folgender Hilfeseite
 
 	$ java Big
 	USAGE :
@@ -70,7 +70,7 @@ Big\ 1 begrüßte den Nutzer in schlechtem Englisch mit folgender Hilfeseite
 Big2
 ====
 
-Big\ 2 arbeitete wesentlich genauer als Big\ 1 und ermöglichte das Erzeugen
+Big 2 arbeitete wesentlich genauer als Big 1 und ermöglichte das Erzeugen
 von verschiedenen Daten, entweder nur „Null-Bytes“, Zufallstexte oder
 zufällige Binärdaten.
 
@@ -100,7 +100,7 @@ Big3
 ====
 
 Bei Big3 wurde vor allem an der Geschwindigkeit gearbeitet. Das Programm
-schrieb die Daten nun in 10 MB Blocks, um Festplattenzugriffe effizienter zu
+schrieb die Daten nun in 10 MB Blocks, um Festplattenzugriffe effizienter zu
 gestalten. Das Erzeugen von Zufallstexten dauerte wie auch in der Vorversion,
 ziemlich lange.
 
@@ -148,11 +148,11 @@ Geschwindigkeit unter „Nullbytes“ angegeben wurde.
 
 Programm  Nullbytes   Zufallstext  Zufallsbytes
 --------  ----------  -----------  ------------
-Linux     9.5\ GiB/s  29\ MiB/s    13\ MiB/s
-Big1      299\ MiB/s  n/a          n/a
-Big2      15\ MiB/s   19\ MiB/s    5\ MiB/s
-Big3      3.7\ GiB/s  79\ MiB/s    276\ MiB/s
-Big4      3.8\ GiB/s  823\ MiB/s   1394\ Mib/s
+Linux     9.5 GiB/s   29 MiB/s     13 MiB/s
+Big1      299 MiB/s   n/a          n/a
+Big2      15 MiB/s    19 MiB/s     5 MiB/s
+Big3      3.7 GiB/s   79 MiB/s     276 MiB/s
+Big4      3.8 GiB/s   823 MiB/s    1394 Mib/s
 
 Die starke Beschleunigung bei Big4 wird vor Allem durch die konsequente
 Verwendung von mehreren Threads erreicht, sodass Zufallsdaten schneller
