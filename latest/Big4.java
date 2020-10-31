@@ -9,7 +9,7 @@ import java.nio.channels.SeekableByteChannel;
 
 public class Big4 {
 
-	private static final int BUFSIZ   = 1024 * 256;
+	private static final int BUFSIZ   = 1024 * 512; // Newly 512 KiB buffer
 	private static final int CAPACITY = 48;
 	private static final byte[] TEXT = new String("abzdefghijklmnopqrstuv" +
 				"wxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789").
@@ -59,8 +59,8 @@ public class Big4 {
 	}
 
 	private static void copyright() {
-		System.out.println("Ma_Sys.ma Big 4.0.1, Copyright (c) 2014, " +
-							"2019 Ma_Sys.ma.");
+		System.out.println("Ma_Sys.ma Big 4.0.2, Copyright (c) 2014, " +
+						"2019, 2020 Ma_Sys.ma.");
 		System.out.println(
 			"For further info send an e-mail to Ma_Sys.ma@web.de.");
 		System.out.println();
@@ -106,10 +106,12 @@ public class Big4 {
 			return;
 
 		Path fp = Paths.get(file);
+		// Newly without StandardOpenOption.TRUNCATE_EXISTING because
+		// this way one can specify target file NUL on Windows to
+		// use it for benchmark purposes.
 		try(SeekableByteChannel sb = Files.newByteChannel(fp,
 					StandardOpenOption.WRITE,
-					StandardOpenOption.CREATE,
-					StandardOpenOption.TRUNCATE_EXISTING)) {
+					StandardOpenOption.CREATE)) {
 			run(sb);
 		}
 

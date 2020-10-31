@@ -1,3 +1,10 @@
+mdvl-big4 (1.0.1) stable; urgency=medium
+
+  * Increase buffer size to 512 KiB, remove TRUNCATE option to support
+    Windows redirection to NUL for benchmark purposes.
+
+ -- Linux-Fan, Ma_Sys.ma <Ma_Sys.ma@web.de>  Sat, 31 Oct 2020 23:37:00 +0100
+
 mdvl-big4 (1.0.0) stable; urgency=medium
 
   * Package created with MDPC 2
