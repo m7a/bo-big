@@ -7,7 +7,7 @@ keywords: ["big4", "big"]
 date: 2019/12/09 10:59:12
 lang: de-DE
 x-masysma-repository: https://www.github.com/m7a/bo-big
-x-masysma-website: https://masysma.lima-city.de/32/big4.xhtml
+x-masysma-website: https://masysma.net/32/big4.xhtml
 x-masysma-owned: 1
 x-masysma-copyright: |
   Copyright (c) 2014, 2019 Ma_Sys.ma.
